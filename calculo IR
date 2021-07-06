@@ -1,0 +1,83 @@
+Algoritmo "CALCULO_DE_IR"
+
+Var
+       nome, logr, mail, sexo: caracter
+       nasc,idade, cpf, tele, rg, num: inteiro
+       sal, ir: real
+       AtivoInativo:logico
+      
+
+
+Inicio
+        escreval ("================= DADOS CADASTRAIS ========================")
+        escreva ("Insira seu nome: ")
+        leia (nome)
+        escreva ("insira sua data de nascimento: dia/mês/ano ")
+        leia(nasc)
+         escreva("insira sua idade: ")
+         leia (idade)
+         escreva("insira seu telefone, (ddd): ")
+         leia(tele)
+         escreva ("insira seu CPF, com pontos e hífen: ")
+         leia (CPF)
+         escreva ("insira seu RG, com separação de pontos hífen: ")
+         leia (rg)
+         escreva ("sexo:")
+         leia (sexo)
+
+         escreval ("========= Endereço ========= ")
+         escreva ("Logradouro:")
+         leia (logr)
+         escreva ("número:")
+         leia (num)
+         escreva ("E-mail:")
+         leia(mail)
+         escreval ("==========================================================")
+         
+
+         
+         escreval ("=================  CÁLCULO DO IR =========================")
+
+         escreval (" Informações sobre o recolhimento do IR: ")
+
+         escreval("------------------ TABELA DE CÁCULO -----------------------")
+
+         escreval("Valor da receita anual igual a R$ 28.000,00")
+         escreval("O cálculo mensal será feito da seguinte forma:")
+         escreval("28.000,00/ por 12 meses = 2.333,33 valor da receita mensal")
+         escreval("A partir de R$ 2.333.33 será recolhido o valor de 15%")
+         escreval("R$ 2.333,33 x 15% = R$ 350,00")
+         escreval("Se o valor for abaixo de R$ 350,00 o contribuinte não deverá recolher")
+         escreval ("----------------------------------------------------------")
+
+
+         escreval ("================= DADOS PARA CÁCULO IR ===================")
+
+         escreva ("Informe o valor do seu salário:")
+         leia (sal)
+
+         escreva ("Está registrado nessa data? Digite 0 para (SIM) e 1 para (NÃO):")
+         leia (AtivoInativo)
+         se (AtivoInativo=0)ENTAO
+         escreval ("Status: Funcionário Ativo")
+         senao
+         escreval ("Status: Funcionario Inativo")
+         fimse
+         escreval ("------------------------------------=---------------------")
+         escreval ("Como o seu salário é de: R$" , sal)
+         ir<-(sal*15)/100
+         escreval ("O valor de IR a ser recolhido é de R$", ir)
+
+         escreval ("------------------------------------=---------------------")
+         Se (ir>=350)entao
+         
+         escreval ("Você DEVERÁ declarar o imposto de renda.")
+         senao
+
+         escreval ("Você NÃO PRECISA declarar o imposto de renda.")
+         fimse
+
+
+         escreval ("===============  FIM CÁLCULO DO IR =======================")
+
+Fimalgoritmo
